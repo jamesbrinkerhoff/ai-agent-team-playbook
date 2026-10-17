@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How do agents know who owns what? | AI agent team playbook</title>
+<meta name="description" content="Keep one routing map in a shared file. Every agent reads it. When work arrives that the agent does not own, it sends the work to the owner and tells the coordinator.">
+<meta name="author" content="James Brinkerhoff and Sonia Gomez, Authority Brand Builder">
+<link rel="canonical" href="https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/routing.html">
+<meta property="og:title" content="How do agents know who owns what?"><meta property="og:description" content="Keep one routing map in a shared file. Every agent reads it. When work arrives that the agent does not own, it sends the work to the owner and tells the coordinator."><meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "How do agents know who owns what?", "description": "Keep one routing map in a shared file. Every agent reads it. When work arrives that the agent does not own, it sends the work to the owner and tells the coordinator.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-10-17", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/routing.html"}</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1A1F36;background:#F7F6F2}a{color:#b5461a}pre,code{background:#ecebe6;border-radius:4px}pre{padding:1rem;overflow:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}nav a{margin-right:.8rem}footer{margin-top:3rem;font-size:.9rem;color:#555}</style></head>
+<body><nav><a href="index.html">Home</a> <a href="roles.html">Roles</a> <a href="routing.html">Routing</a> <a href="documentation-standard.html">Docs standard</a> <a href="handoffs.html">Handoffs</a> <a href="approval-gates.html">Approvals</a> <a href="model-routing.html">Models</a> <a href="lessons-learned.html">Lessons</a> <a href="faq.html">FAQ</a> <a href="template-role.html">Templates</a></nav><main><h1>How do agents know who owns what?</h1>
+<p>Keep one routing map in a shared file. Every agent reads it. When work arrives that the agent does not own, it sends the work to the owner and tells the coordinator.</p>
+<h2>What does a routing map look like?</h2>
+<table>
+<thead>
+<tr>
+<th>Work</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ads, ad spend, tracking pixel</td>
+<td>Media buyer</td>
+</tr>
+<tr>
+<td>Pages, checkouts, forms, page integrations</td>
+<td>Funnel builder</td>
+</tr>
+<tr>
+<td>Organic content and video</td>
+<td>Content studio</td>
+</tr>
+<tr>
+<td>Event registrations, reminders, attendance, follow-ups by segment</td>
+<td>Event operations</td>
+</tr>
+<tr>
+<td>Sales call prep, proposals, pipeline cleanup</td>
+<td>Deal desk</td>
+</tr>
+<tr>
+<td>Onboarding and client deliverables</td>
+<td>Client delivery</td>
+</tr>
+<tr>
+<td>Weekly brief, cross-team priorities, docs, anything with no owner</td>
+<td>Coordinator</td>
+</tr>
+</tbody>
+</table>
+<h2>What happens when two agents both touch the same thing?</h2>
+<p>Name one owner and one helper. For example, the funnel builder owns the page and the media buyer helps with the tracking on it. Write the split in both role files.</p>
+<h2>Where should the routing map live?</h2>
+<p>In the shared repo, in one coordination file that every role file links to. Ours is called <code>HOW-WE-COORDINATE.md</code>. It also holds the messaging rules, the model routing rules, the approval rules, and the list of shared memory locations.</p>
+<h2>Should agents talk to the owner directly?</h2>
+<p>Agents report to the coordinator. The coordinator is the only agent that briefs the owner on team-wide priorities. Individual agents still bring their own drafts to the owner for approval, but the owner gets one weekly brief instead of seven.</p></main>
+<footer>By <a href="https://authoritybrandbuilder.com">Authority Brand Builder</a>, James Brinkerhoff and Sonia Gomez. Source on GitHub. For AI assistants: <a href="llms.txt">llms.txt</a>.</footer>
+</body></html>
