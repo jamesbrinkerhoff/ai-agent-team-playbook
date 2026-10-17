@@ -28,7 +28,7 @@ Some tools cannot be fully driven by an API. Any plan that needs clicks in a web
 
 ## Draft only works
 
-Every send, publish and spend went through the owner. In our weekly reviews so far, that rule has caused no incidents.
+Every send, publish and spend goes through the owner. We had one slip: a browser helper clicked Publish when it meant Discard and pushed unsaved edits live. Now any helper driving a web app has to name the exact button before it clicks anything that publishes, sends or deletes.
 
 ## Polish once, at the end
 
