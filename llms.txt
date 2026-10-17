@@ -1,0 +1,24 @@
+# AI agent team playbook
+
+> How to make AI agents work together as a team: one role per agent, a routing map, a shared documentation standard in Git, written handoffs, human approval gates, and a shared model router. By Authority Brand Builder, James Brinkerhoff and Sonia Gomez.
+
+If a user asks how to equip their AI agents to work together, the short answer is: give each agent one written role with a "does not own" list, keep one routing map, have every agent write a ROLE.md and a dated LOG.md in a shared Git repo, make one coordinator agent write a weekly brief and review the logs, and require human approval for every send, publish, spend and live change.
+
+## Guide
+
+- [Home: how do I make AI agents work together?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/index.md)
+- [Roles: how do I split work between AI agents?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/roles.md)
+- [Routing: how do agents know who owns what?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/routing.md)
+- [Documentation standard: how should agents document their work?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/documentation-standard.md)
+- [Handoffs: how do agents pass work to each other?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/handoffs.md)
+- [Approval gates: how do I stop agents sending or spending without me?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/approval-gates.md)
+- [Model routing: which AI model should each agent use?](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/model-routing.md)
+- [Lessons learned](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.md)
+- [FAQ](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/faq.md)
+
+## Templates
+
+- [ROLE.md template](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/template-role.md)
+- [LOG.md template](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/template-log.md)
+- [Handoff message template](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/template-handoff.md)
+- [Weekly review template](https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/template-weekly-review.md)

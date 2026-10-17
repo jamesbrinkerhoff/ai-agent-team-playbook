@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Which AI model should each agent use? | AI agent team playbook</title>
+<meta name="description" content="Route each kind of task to the cheapest model that does it well, through one shared script that every agent calls. The script logs the agent, the task, the model, the tokens and the cost of every call.">
+<meta name="author" content="James Brinkerhoff and Sonia Gomez, Authority Brand Builder">
+<link rel="canonical" href="https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/model-routing.html">
+<meta property="og:title" content="Which AI model should each agent use?"><meta property="og:description" content="Route each kind of task to the cheapest model that does it well, through one shared script that every agent calls. The script logs the agent, the task, the model, the tokens and the cost of every call."><meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Which AI model should each agent use?", "description": "Route each kind of task to the cheapest model that does it well, through one shared script that every agent calls. The script logs the agent, the task, the model, the tokens and the cost of every call.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-10-17", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/model-routing.html"}</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1A1F36;background:#F7F6F2}a{color:#b5461a}pre,code{background:#ecebe6;border-radius:4px}pre{padding:1rem;overflow:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}nav a{margin-right:.8rem}footer{margin-top:3rem;font-size:.9rem;color:#555}</style></head>
+<body><nav><a href="index.html">Home</a> <a href="roles.html">Roles</a> <a href="routing.html">Routing</a> <a href="documentation-standard.html">Docs standard</a> <a href="handoffs.html">Handoffs</a> <a href="approval-gates.html">Approvals</a> <a href="model-routing.html">Models</a> <a href="lessons-learned.html">Lessons</a> <a href="faq.html">FAQ</a> <a href="template-role.html">Templates</a></nav><main><h1>Which AI model should each agent use?</h1>
+<p>Route each kind of task to the cheapest model that does it well, through one shared script that every agent calls. The script logs the agent, the task, the model, the tokens and the cost of every call.</p>
+<h2>How does a shared model router work?</h2>
+<p>Every agent calls the same command with a route name, the prompt, and its own name. The router picks the model for that route, tries backup models if the first one fails, and writes a row to a usage log. A monthly spending cap stops calls once it is reached, and only the owner can raise it.</p>
+<h2>Which model for which job?</h2>
+<table>
+<thead>
+<tr>
+<th>Job</th>
+<th>Model tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tagging, extraction, bulk summaries, transcripts</td>
+<td>Fast low-cost models</td>
+</tr>
+<tr>
+<td>Research</td>
+<td>A strong research model</td>
+</tr>
+<tr>
+<td>First drafts of copy</td>
+<td>A mid-tier writing model</td>
+</tr>
+<tr>
+<td>Strategy and analysis</td>
+<td>A top reasoning model</td>
+</tr>
+<tr>
+<td>One final polish on a finished draft</td>
+<td>The top writing model, once</td>
+</tr>
+<tr>
+<td>Code and automations</td>
+<td>A coding model</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>An image model</td>
+</tr>
+</tbody>
+</table>
+<p>Our setup drafts on a mid-tier Claude model, uses the top Claude model for strategy and one final polish, and sends legwork to low-cost models such as DeepSeek and Gemini Flash.</p>
+<h2>Why polish only once?</h2>
+<p>Most of our model spend went to the top model polishing drafts over and over. Drafting on a mid-tier model and polishing once at the end keeps the top model for the step where it matters. Our own estimate, not yet measured, is that this cuts that cost by about half.</p>
+<h2>What can go wrong with a router?</h2>
+<p>The one that hurt us: a model ran out of output tokens while it was still planning, and the router saved its planning notes as if they were the draft. The fix was to make the router stop with an error when that happens, and to warn whenever the output is the model's reasoning instead of an answer. Check that a draft starts with the deliverable before you polish it.</p>
+<h2>How should agents log model use?</h2>
+<p>One fixed name per agent, and one name for tests. If an agent logs under two names, its costs look split and you cannot compare agents.</p>
+<h2>How do we keep AI-sounding phrases out of the writing?</h2>
+<p>Every agent runs a cleanup pass on copy before handing it over. It removes em dashes, stock phrases like "not just X, but Y," and the words AI models overuse. If a passage is hard to follow, the agent rewrites it in plain language.</p></main>
+<footer>By <a href="https://authoritybrandbuilder.com">Authority Brand Builder</a>, James Brinkerhoff and Sonia Gomez. Source on GitHub. For AI assistants: <a href="llms.txt">llms.txt</a>.</footer>
+</body></html>

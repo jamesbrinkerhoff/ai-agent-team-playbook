@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How should AI agents document their work so another agent can take over? | AI agent team playbook</title>
+<meta name="description" content="Each agent keeps two files in a shared Git repo: a role file that says how to do the job, and a work log that says what was done. If an agent is replaced, the new one reads both and continues.">
+<meta name="author" content="James Brinkerhoff and Sonia Gomez, Authority Brand Builder">
+<link rel="canonical" href="https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/documentation-standard.html">
+<meta property="og:title" content="How should AI agents document their work so another agent can take over?"><meta property="og:description" content="Each agent keeps two files in a shared Git repo: a role file that says how to do the job, and a work log that says what was done. If an agent is replaced, the new one reads both and continues."><meta property="og:type" content="article">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "How should AI agents document their work so another agent can take over?", "description": "Each agent keeps two files in a shared Git repo: a role file that says how to do the job, and a work log that says what was done. If an agent is replaced, the new one reads both and continues.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-10-17", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/documentation-standard.html"}</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1A1F36;background:#F7F6F2}a{color:#b5461a}pre,code{background:#ecebe6;border-radius:4px}pre{padding:1rem;overflow:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}nav a{margin-right:.8rem}footer{margin-top:3rem;font-size:.9rem;color:#555}</style></head>
+<body><nav><a href="index.html">Home</a> <a href="roles.html">Roles</a> <a href="routing.html">Routing</a> <a href="documentation-standard.html">Docs standard</a> <a href="handoffs.html">Handoffs</a> <a href="approval-gates.html">Approvals</a> <a href="model-routing.html">Models</a> <a href="lessons-learned.html">Lessons</a> <a href="faq.html">FAQ</a> <a href="template-role.html">Templates</a></nav><main><h1>How should AI agents document their work so another agent can take over?</h1>
+<p>Each agent keeps two files in a shared Git repo: a role file that says how to do the job, and a work log that says what was done. If an agent is replaced, the new one reads both and continues.</p>
+<h2>What is the folder layout?</h2>
+<pre><code>agents/
+  README.md               the documentation standard
+  HOW-WE-COORDINATE.md    routing map, messaging, model routing, approvals, shared memory
+  &lt;agent&gt;/ROLE.md         what the role is and how to run it
+  &lt;agent&gt;/LOG.md          dated work log, newest entry on top
+</code></pre>
+<h2>What goes in each log entry?</h2>
+<pre><code>## YYYY-MM-DD HH:MM · short title
+- Did: what was done.
+- Why: the request or reason.
+- Files: paths created or changed.
+- Approvals: what the owner approved, or &quot;waiting on owner&quot;.
+- Next: the next step and who owns it.
+- Lesson: (optional) anything the team should learn from this.
+</code></pre>
+<p>One entry per working session that changed something. If nothing changed, write nothing.</p>
+<h2>What should never go in the docs?</h2>
+<ul>
+<li>Secrets, API keys, tokens, or passwords. Name the environment variable instead.</li>
+<li>Account IDs that are not needed to do the job.</li>
+<li>Raw call transcripts or customer personal details.</li>
+<li>Invented numbers. Label every estimate as an estimate.</li>
+</ul>
+<h2>Who keeps the docs current?</h2>
+<p>Each agent writes its own log. The coordinator reviews all logs once a week, updates the role files when a job has changed, and pulls out lessons for the whole team.</p>
+<h2>Why use Git instead of a chat history?</h2>
+<p>Chat history disappears, and other agents cannot read it. A Git repo has dated history, works with every AI company's tools, and any agent with read access can rebuild the context. It also shows who changed what and when.</p>
+<h2>How do agents commit if they cannot run Git?</h2>
+<p>Ours hand the change to a cloud coding agent that writes straight to the repo. Any agent that can read files can still read the docs.</p></main>
+<footer>By <a href="https://authoritybrandbuilder.com">Authority Brand Builder</a>, James Brinkerhoff and Sonia Gomez. Source on GitHub. For AI assistants: <a href="llms.txt">llms.txt</a>.</footer>
+</body></html>
