@@ -5,7 +5,7 @@
 <meta name="author" content="James Brinkerhoff and Sonia Gomez, Authority Brand Builder">
 <link rel="canonical" href="https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html">
 <meta property="og:title" content="What have we learned running an AI agent team?"><meta property="og:description" content="These come from our weekly team reviews. Each one changed how the agents work."><meta property="og:type" content="article">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What have we learned running an AI agent team?", "description": "These come from our weekly team reviews. Each one changed how the agents work.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-10-17", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What have we learned running an AI agent team?", "description": "These come from our weekly team reviews. Each one changed how the agents work.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-10-23", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html"}</script>
 <style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1A1F36;background:#F7F6F2}a{color:#b5461a}pre,code{background:#ecebe6;border-radius:4px}pre{padding:1rem;overflow:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}nav a{margin-right:.8rem}footer{margin-top:3rem;font-size:.9rem;color:#555}</style></head>
 <body><nav><a href="index.html">Home</a> <a href="roles.html">Roles</a> <a href="routing.html">Routing</a> <a href="documentation-standard.html">Docs standard</a> <a href="handoffs.html">Handoffs</a> <a href="approval-gates.html">Approvals</a> <a href="model-routing.html">Models</a> <a href="lessons-learned.html">Lessons</a> <a href="faq.html">FAQ</a> <a href="template-role.html">Templates</a></nav><main><h1>What have we learned running an AI agent team?</h1>
 <p>These come from our weekly team reviews. Each one changed how the agents work.</p>
@@ -28,6 +28,20 @@
 <h2>Watch for planning notes saved as drafts</h2>
 <p>If a model hits its output limit mid-thought, make the tooling fail loudly instead of saving partial reasoning.</p>
 <h2>One log name per agent</h2>
-<p>Agents logging under several names made per-agent cost reports useless until we fixed it.</p></main>
+<p>Agents logging under several names made per-agent cost reports useless until we fixed it.</p>
+<h2>Done means checked live</h2>
+<p>A fix reported as done was still wrong a day later. The platform had not kept the first save, and nobody looked again. Now, after any change to a live page, email, workflow or tool, the agent fetches the live version and checks it before it reports. The report says what was fetched, when, and what it showed. A teammate's "done" counts as a claim until someone re-checks it.</p>
+<h2>One rule change, one sweep</h2>
+<p>When the owner changed a rule several times in one week, each change caused a round of cleanup, and one set of changes took three passes. Now one agent leads the sweep. It lists every old phrase, name and synonym, searches every working file for each one, and checks any relayed decision against the owner's own words before editing. Any brief that carries a fact like a price names the line in the main business file it came from.</p>
+<h2>A success code does not mean the output is complete</h2>
+<p>Our router reported success on drafts that the model had cut off at the token limit. About twenty calls in one week stopped at exactly a round limit, so some outputs were likely incomplete and nobody noticed. The fix we proposed is to treat a cut-off answer as a failure and log why each call stopped. Until then, check the end of every long output and count the items you asked for.</p>
+<h2>Check names and figures against the original recording</h2>
+<p>An older transcript heard a client's result wrong, and our files spelled a client's name wrong. Going back to the raw audio and to the person's own introduction in the video fixed both. Quotes, figures and names now come from the original recording, not from a summary of it.</p>
+<h2>Back up before every edit</h2>
+<p>Two older documents were rewritten when they should have been left alone. Both came back from the dated backup copies the agent made before editing. Every agent makes a dated backup before it changes a file, and asks before it edits history documents.</p>
+<h2>Give each shared file one owner at a time</h2>
+<p>Two agent runs edited the same deploy files at once and almost broke a live page. Now one run owns a file while it works. The agent re-reads the file right before it writes and edits by anchor, so it never overwrites someone else's change.</p>
+<h2>Ask every agent for one improvement a week</h2>
+<p>Some agents logged good lessons but proposed no changes. Now each agent files at least one proposal backed by evidence each week, or says plainly why it has none.</p></main>
 <footer>By <a href="https://authoritybrandbuilder.com">Authority Brand Builder</a>, James Brinkerhoff and Sonia Gomez. Source on GitHub. For AI assistants: <a href="llms.txt">llms.txt</a>.</footer>
 </body></html>

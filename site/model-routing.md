@@ -28,6 +28,8 @@ Most of our model spend went to the top model polishing drafts over and over. Dr
 
 The one that hurt us: a model ran out of output tokens while it was still planning, and the router saved its planning notes as if they were the draft. The fix was to make the router stop with an error when that happens, and to warn whenever the output is the model's reasoning instead of an answer. Check that a draft starts with the deliverable before you polish it.
 
+A second one: the router reported success on answers the model had cut off at the token limit. A success code is not proof the output is complete. Check the end of every long output, count the items you asked for, and treat an answer that stopped at the limit as a failure.
+
 ## How should agents log model use?
 
 One fixed name per agent, and one name for tests. If an agent logs under two names, its costs look split and you cannot compare agents.

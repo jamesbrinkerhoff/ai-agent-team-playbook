@@ -17,6 +17,11 @@ Approved by owner: yes / no / not needed
 
 See [the handoff template](../templates/HANDOFF.md).
 
+Two more rules for handoffs that report or carry facts:
+
+- A report that something live is fixed says how it was checked: what was fetched, when, and what it showed.
+- A brief that carries a price or a rule names the line in the main business file it came from.
+
 ## How do you mark something urgent?
 
 Our messaging tool has a priority flag. Priority on wakes the receiving agent now. Priority off holds the message until that agent's next scheduled run. We use priority only when the receiver is blocked or the owner is waiting. Everything else waits.
