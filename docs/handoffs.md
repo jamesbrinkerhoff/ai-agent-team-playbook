@@ -21,6 +21,7 @@ Two more rules for handoffs that report or carry facts:
 
 - A report that something live is fixed says how it was checked: what was fetched, when, and what it showed.
 - A brief that carries a price or a rule names the line in the main business file it came from.
+- A hand-off of a live change quotes the owner's exact approving words, where they said them, and when. Without that quote, the receiver prepares the change and waits.
 
 ## How do you mark something urgent?
 

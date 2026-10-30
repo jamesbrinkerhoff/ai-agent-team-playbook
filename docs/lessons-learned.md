@@ -70,3 +70,27 @@ Two agent runs edited the same deploy files at once and almost broke a live page
 
 Some agents logged good lessons but proposed no changes. Now each agent files at least one proposal backed by evidence each week, or says plainly why it has none.
 
+
+## Write the lesson when the job ends, not on Friday
+
+In one week several agents did a lot of real work but wrote no learning notes. The weekly review had to rebuild the week from work logs, and the lessons from those days were mostly lost. One agent, the coordinator, missed its own notes two weeks running. Now every job ends with two lines in the same step: one in the work log and one learning note that says what happened, what went wrong and what to change.
+
+## Upload and check new files before a page goes live
+
+A page went live for about a minute with a broken image, because the new image had not been uploaded before the switch. Now, before any version with a new image, video or file goes live, the agent uploads it first and checks that its web address loads. If it does not load, the change waits.
+
+## Pass the owner's exact approval with the change
+
+A live change was stopped because the only message passed along from the owner was "thx". It shipped once someone found the real approval. Now any hand-off of a live change includes the owner's exact approving words, where they said them, and when. A helper without that quote prepares the change and waits.
+
+## Check the vendor's plan before offering an option
+
+An agent offered the owner an access option that the current software plan did not include. Before an agent offers a plan, login or integration choice, it checks that plan's limits in the vendor's own documents.
+
+## Proposals need answers, not more proposals
+
+Improvement proposals piled up for two weeks with no yes or no, so nothing changed. Now any proposal older than two weeks goes back to the owner in one short list, one line each, so it can be approved or turned down in a few minutes.
+
+## Only a real customer proves the whole system
+
+Every part of a sales funnel was tested on its own: pages, payments, emails, bookings and tracking. The parts that connect them can only be proven by one real order going all the way through. Once the build is done, that one real test comes before any new page or email.
