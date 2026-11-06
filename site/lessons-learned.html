@@ -5,7 +5,7 @@
 <meta name="author" content="James Brinkerhoff and Sonia Gomez, Authority Brand Builder">
 <link rel="canonical" href="https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html">
 <meta property="og:title" content="What have we learned running an AI agent team?"><meta property="og:description" content="These come from our weekly team reviews. Each one changed how the agents work."><meta property="og:type" content="article">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What have we learned running an AI agent team?", "description": "These come from our weekly team reviews. Each one changed how the agents work.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-10-30", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What have we learned running an AI agent team?", "description": "These come from our weekly team reviews. Each one changed how the agents work.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-11-06", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html"}</script>
 <style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1A1F36;background:#F7F6F2}a{color:#b5461a}pre,code{background:#ecebe6;border-radius:4px}pre{padding:1rem;overflow:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}nav a{margin-right:.8rem}footer{margin-top:3rem;font-size:.9rem;color:#555}</style></head>
 <body><nav><a href="index.html">Home</a> <a href="roles.html">Roles</a> <a href="routing.html">Routing</a> <a href="documentation-standard.html">Docs standard</a> <a href="handoffs.html">Handoffs</a> <a href="approval-gates.html">Approvals</a> <a href="model-routing.html">Models</a> <a href="lessons-learned.html">Lessons</a> <a href="faq.html">FAQ</a> <a href="template-role.html">Templates</a></nav><main><h1>What have we learned running an AI agent team?</h1>
 <p>These come from our weekly team reviews. Each one changed how the agents work.</p>
@@ -54,6 +54,20 @@
 <h2>Proposals need answers, not more proposals</h2>
 <p>Improvement proposals piled up for two weeks with no yes or no, so nothing changed. Now any proposal older than two weeks goes back to the owner in one short list, one line each, so it can be approved or turned down in a few minutes.</p>
 <h2>Only a real customer proves the whole system</h2>
-<p>Every part of a sales funnel was tested on its own: pages, payments, emails, bookings and tracking. The parts that connect them can only be proven by one real order going all the way through. Once the build is done, that one real test comes before any new page or email.</p></main>
+<p>Every part of a sales funnel was tested on its own: pages, payments, emails, bookings and tracking. The parts that connect them can only be proven by one real order going all the way through. Once the build is done, that one real test comes before any new page or email.</p>
+<h2>Cold-read scores only</h2>
+<p>Self-graded craft reviews inflate, mostly by changing which checks are N/A. Fix the N/A set first, keep it identical before and after, and record only a separate cold reader's totals.</p>
+<h2>Inventory gate before more list-building</h2>
+<p>If handed-off names are sitting unworked for more than about two weeks, stop adding names until outreach starts. Tell the coordinator instead of padding the pile.</p>
+<h2>Clear, save, then curl-check embeds</h2>
+<p>After pasting custom code into a page builder, clear the box, save, and fetch the public preview for the page wrapper and a known marker before reporting "saved."</p>
+<h2>Shared blocks need a twin grep</h2>
+<p>When shared wording changes, search every live page including A/B twins for the old string and put every hit in the paste and verify loop.</p>
+<h2>Re-hash pinned inputs at start and end</h2>
+<p>If an upstream file moves while you work, stop the ship. A pin written from a stale hash is a false green.</p>
+<h2>Human blockers need reach-proof and a dated escalate</h2>
+<p>Confirm the ask reached the person (share plus acknowledgment). Escalate the first weekday after the ask date; do not wait for the last routine day. Calendar holds for owners stay with the coordinator after the owner's own words.</p>
+<h2>Templated skill lines are rulings for craft</h2>
+<p>On locked template pieces, mark signature lines as rulings before craft flips. Only claims or compliance may change them.</p></main>
 <footer>By <a href="https://authoritybrandbuilder.com">Authority Brand Builder</a>, James Brinkerhoff and Sonia Gomez. Source on GitHub. For AI assistants: <a href="llms.txt">llms.txt</a>.</footer>
 </body></html>

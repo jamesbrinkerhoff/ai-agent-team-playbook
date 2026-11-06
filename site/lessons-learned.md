@@ -94,3 +94,31 @@ Improvement proposals piled up for two weeks with no yes or no, so nothing chang
 ## Only a real customer proves the whole system
 
 Every part of a sales funnel was tested on its own: pages, payments, emails, bookings and tracking. The parts that connect them can only be proven by one real order going all the way through. Once the build is done, that one real test comes before any new page or email.
+
+## Cold-read scores only
+
+Self-graded craft reviews inflate, mostly by changing which checks are N/A. Fix the N/A set first, keep it identical before and after, and record only a separate cold reader's totals.
+
+## Inventory gate before more list-building
+
+If handed-off names are sitting unworked for more than about two weeks, stop adding names until outreach starts. Tell the coordinator instead of padding the pile.
+
+## Clear, save, then curl-check embeds
+
+After pasting custom code into a page builder, clear the box, save, and fetch the public preview for the page wrapper and a known marker before reporting "saved."
+
+## Shared blocks need a twin grep
+
+When shared wording changes, search every live page including A/B twins for the old string and put every hit in the paste and verify loop.
+
+## Re-hash pinned inputs at start and end
+
+If an upstream file moves while you work, stop the ship. A pin written from a stale hash is a false green.
+
+## Human blockers need reach-proof and a dated escalate
+
+Confirm the ask reached the person (share plus acknowledgment). Escalate the first weekday after the ask date; do not wait for the last routine day. Calendar holds for owners stay with the coordinator after the owner's own words.
+
+## Templated skill lines are rulings for craft
+
+On locked template pieces, mark signature lines as rulings before craft flips. Only claims or compliance may change them.
