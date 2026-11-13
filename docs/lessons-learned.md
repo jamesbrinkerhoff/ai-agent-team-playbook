@@ -122,3 +122,31 @@ Confirm the ask reached the person (share plus acknowledgment). Escalate the fir
 ## Templated skill lines are rulings for craft
 
 On locked template pieces, mark signature lines as rulings before craft flips. Only claims or compliance may change them.
+
+## Log the decision the day you hear it
+
+An answer the owner gives in one agent's chat, or on a quick-pick card, is invisible to every other agent. The agent who hears it writes a row in the shared decision log that day, with the owner's own words and the time. Without that row, other agents cannot verify the decision and will keep their confirm flags open.
+
+## When a date moves, sweep every record
+
+A date or offer change goes stale in plans, briefs, task blockers and scheduled drafts unless someone searches for the old value. Search every shared record for it before calling the move done.
+
+## Fix access once instead of working around it
+
+A spending cap on a shared model key, a token that lacks a scope, or a script that gets blocked for sending no user agent will cost several agents a workaround each run. Log the gap where the whole team can see it and get it fixed once.
+
+## Keep confirm tags out of visible text from the first draft
+
+Put every placeholder or "to confirm" note in a hidden comment plus the review file, never in visible page text. Visible tags block the publish at the moment the owner says go.
+
+## Rebuild right before deploy, then check every changed line live
+
+When the owner is still sending edits, rebuild the preview from the current file just before each deploy, then fetch the live preview and search it for every line changed in that pass.
+
+## A triggered message reaches every path that fires the trigger
+
+Do not write "as promised" for a promise only one path saw. When a deadline applies to one buying path only, name that path in the deadline line.
+
+## Stamp times from the clock and name gaps precisely
+
+Take every time in a log or file header from the system clock, never an estimate. When a transcript is missing a passage, call it a transcript gap until a second source, such as captions or the video, shows whether it was really never said.

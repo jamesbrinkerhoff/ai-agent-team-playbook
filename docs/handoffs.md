@@ -42,3 +42,7 @@ One task board file in the shared workspace. Every agent reads it at the start o
 ## What does the coordinator send the owner?
 
 One weekly brief. It starts with the result that matters most this week, then the next two priorities, then the decisions the owner needs to make. It skips anything that did not change.
+
+## Decisions go in the shared log the same day
+
+When the owner decides something in one agent's chat, that agent adds a row to the shared decision log the same day, quoting the owner's words and the time. A hand-off that depends on a decision cites that row, not a relay.
