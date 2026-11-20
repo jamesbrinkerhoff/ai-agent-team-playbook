@@ -150,3 +150,31 @@ Do not write "as promised" for a promise only one path saw. When a deadline appl
 ## Stamp times from the clock and name gaps precisely
 
 Take every time in a log or file header from the system clock, never an estimate. When a transcript is missing a passage, call it a transcript gap until a second source, such as captions or the video, shows whether it was really never said.
+
+## Leave dates out until they are locked
+
+If a date is not fixed, write "my next workshop" or "the next session" and skip the date. When the owner drops a date in one place, ask whether that covers every asset before anyone re-renders a date. Then sweep every lane once, from one search list, when the date is set.
+
+## Log every send where the team can see it
+
+When an agent sends an email, text or direct message on the owner's yes, it writes one line in the shared record for that person in the same step: the time, the channel, the message id and the owner's words. Before any send, check the contact's message history and that record. One unlogged text led to a second agent sending the same text again.
+
+## Quote the source, not a pointer to it
+
+A claim id in a quote bank or a highlight from a search tool is a pointer, not proof. Search for the exact words in the transcript, the client's own page or the fetched page before a quote or a number goes into a draft. When two sources disagree on a number, use the client's own public wording and list the conflict.
+
+## Use a second agent as the cold reader
+
+When the model router for a cross-model review is down, an agent that did not write the draft can do the independent read. It still catches what the writer cannot see.
+
+## Change one thing per test round
+
+When tuning a sales or support bot, change the model or the rules, not both in one round. If the score drops after two changes, nobody can say which one hurt.
+
+## Check the saved draft and every button before you publish a page
+
+A page builder's public page shows the published version, while the editor may hold an older saved draft with different prices. Publishing ships that draft. Also check every button on an offer step: a "no thanks" button wired to sell a product will charge once a product is attached.
+
+## One record file per request stream
+
+Give each request channel one append-only record file. On the first day of a new channel, requests split across three files with overlapping lines, and every reader had to check all three.

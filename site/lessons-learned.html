@@ -5,7 +5,7 @@
 <meta name="author" content="James Brinkerhoff and Sonia Gomez, Authority Brand Builder">
 <link rel="canonical" href="https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html">
 <meta property="og:title" content="What have we learned running an AI agent team?"><meta property="og:description" content="These come from our weekly team reviews. Each one changed how the agents work."><meta property="og:type" content="article">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What have we learned running an AI agent team?", "description": "These come from our weekly team reviews. Each one changed how the agents work.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-11-13", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "What have we learned running an AI agent team?", "description": "These come from our weekly team reviews. Each one changed how the agents work.", "author": [{"@type": "Person", "name": "James Brinkerhoff"}, {"@type": "Person", "name": "Sonia Gomez"}], "publisher": {"@type": "Organization", "name": "Authority Brand Builder", "url": "https://authoritybrandbuilder.com"}, "dateModified": "2026-11-20", "inLanguage": "en", "url": "https://jamesbrinkerhoff.github.io/ai-agent-team-playbook/lessons-learned.html"}</script>
 <style>body{font-family:system-ui,-apple-system,Segoe UI,sans-serif;max-width:46rem;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#1A1F36;background:#F7F6F2}a{color:#b5461a}pre,code{background:#ecebe6;border-radius:4px}pre{padding:1rem;overflow:auto}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}nav a{margin-right:.8rem}footer{margin-top:3rem;font-size:.9rem;color:#555}</style></head>
 <body><nav><a href="index.html">Home</a> <a href="roles.html">Roles</a> <a href="routing.html">Routing</a> <a href="documentation-standard.html">Docs standard</a> <a href="handoffs.html">Handoffs</a> <a href="approval-gates.html">Approvals</a> <a href="model-routing.html">Models</a> <a href="lessons-learned.html">Lessons</a> <a href="faq.html">FAQ</a> <a href="template-role.html">Templates</a></nav><main><h1>What have we learned running an AI agent team?</h1>
 <p>These come from our weekly team reviews. Each one changed how the agents work.</p>
@@ -82,6 +82,20 @@
 <h2>A triggered message reaches every path that fires the trigger</h2>
 <p>Do not write "as promised" for a promise only one path saw. When a deadline applies to one buying path only, name that path in the deadline line.</p>
 <h2>Stamp times from the clock and name gaps precisely</h2>
-<p>Take every time in a log or file header from the system clock, never an estimate. When a transcript is missing a passage, call it a transcript gap until a second source, such as captions or the video, shows whether it was really never said.</p></main>
+<p>Take every time in a log or file header from the system clock, never an estimate. When a transcript is missing a passage, call it a transcript gap until a second source, such as captions or the video, shows whether it was really never said.</p>
+<h2>Leave dates out until they are locked</h2>
+<p>If a date is not fixed, write "my next workshop" or "the next session" and skip the date. When the owner drops a date in one place, ask whether that covers every asset before anyone re-renders a date. Then sweep every lane once, from one search list, when the date is set.</p>
+<h2>Log every send where the team can see it</h2>
+<p>When an agent sends an email, text or direct message on the owner's yes, it writes one line in the shared record for that person in the same step: the time, the channel, the message id and the owner's words. Before any send, check the contact's message history and that record. One unlogged text led to a second agent sending the same text again.</p>
+<h2>Quote the source, not a pointer to it</h2>
+<p>A claim id in a quote bank or a highlight from a search tool is a pointer, not proof. Search for the exact words in the transcript, the client's own page or the fetched page before a quote or a number goes into a draft. When two sources disagree on a number, use the client's own public wording and list the conflict.</p>
+<h2>Use a second agent as the cold reader</h2>
+<p>When the model router for a cross-model review is down, an agent that did not write the draft can do the independent read. It still catches what the writer cannot see.</p>
+<h2>Change one thing per test round</h2>
+<p>When tuning a sales or support bot, change the model or the rules, not both in one round. If the score drops after two changes, nobody can say which one hurt.</p>
+<h2>Check the saved draft and every button before you publish a page</h2>
+<p>A page builder's public page shows the published version, while the editor may hold an older saved draft with different prices. Publishing ships that draft. Also check every button on an offer step: a "no thanks" button wired to sell a product will charge once a product is attached.</p>
+<h2>One record file per request stream</h2>
+<p>Give each request channel one append-only record file. On the first day of a new channel, requests split across three files with overlapping lines, and every reader had to check all three.</p></main>
 <footer>By <a href="https://authoritybrandbuilder.com">Authority Brand Builder</a>, James Brinkerhoff and Sonia Gomez. Source on GitHub. For AI assistants: <a href="llms.txt">llms.txt</a>.</footer>
 </body></html>

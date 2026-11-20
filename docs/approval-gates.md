@@ -18,6 +18,10 @@ They prepare the action so the owner can approve it in one step. Emails become d
 
 No. Approval covers the exact action the owner named. A task description or an earlier "go ahead" is not approval for a new send.
 
+## Can a second person approve some work?
+
+Yes, if the owner names the categories. For example, a co-founder who is the face of the business can send requests through one private channel. The coordinator agent logs each request in one record file and routes it to the owning agent. The co-founder can approve their own photo edits and client website fixes going live. Money, ads and pricing still need the owner.
+
 ## What other rules keep agents honest?
 
 - Never invent proof, testimonials, results, or numbers.
